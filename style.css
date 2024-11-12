@@ -93,32 +93,3 @@ footer {
   color: #b0bec5;
 }
 
-/* Custom Cursor */
-body::before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(100, 255, 218, 0.15);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  left: var(--x); /* Custom property */
-  top: var(--y);  /* Custom property */
-  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
-}
-
-body::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #64ffda;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  left: var(--x); /* Custom property */
-  top: var(--y);  /* Custom property */
-  transition: transform 0.05s ease;
-}
-
