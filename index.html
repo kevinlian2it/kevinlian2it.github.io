@@ -53,30 +53,40 @@
 
     <!-- Experience Section -->
     <section id="experience">
-      <h2>Experience</h2>
-      <div class="experience-item">
-        <h3>Research Assistant</h3>
-        <p>Columbia Climate School | Oct 2023 – Present</p>
-        <p>Implemented AI and ML techniques to analyze linguistic patterns for sustaining peace.</p>
-      </div>
-      <div class="experience-item">
-        <h3>Intern</h3>
-        <p>Yuzhi Technologies, Beijing | Jun 2023 – Aug 2023</p>
-        <p>Optimized ChatGPT prompts and conducted market research for consumer applications.</p>
-      </div>
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <h3>Research Assistant</h3>
+      <p><em>Columbia Climate School, New York, NY | Oct 2023 – Present</em></p>
+      <p>At Columbia Climate School, I applied AI and machine learning techniques, using NLP and vector embeddings to analyze linguistic patterns for peace research. I developed a high-performance vector database of 100,000+ news articles, integrating retrieval-augmented generation (RAG) with large language models. I also presented research findings at events with 600+ attendees and contributed as first author to two research papers on AI and peace studies.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Intern</h3>
+      <p><em>Yuzhi Technologies, Beijing, China | Jun 2023 – Aug 2023</em></p>
+      <p>At Yuzhi Technologies, I optimized ChatGPT prompts with LangChain and Python, enhancing consumer application engagement. I conducted market research using Python data analysis libraries, contributing to product strategy, and played a key role in launching a health app for the elderly, achieving 4,000+ users in the first week.</p>
+    </div>
     </section>
+
 
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-item">
-        <h3>Data Analysis for Premier League Signings</h3>
-        <p>Utilized Python and Scikit-Learn to analyze over 10,000 player profiles.</p>
-      </div>
-      <div class="project-item">
-        <h3>Peaceful Countries Classifier</h3>
-        <p>Developed a classifier to categorize countries by peace index with 94% accuracy.</p>
-      </div>
+        <div class="project-item">
+          <h3>Data Analysis for Premier League Signings</h3>
+          <p>Utilized Python and Scikit-Learn to analyze over 10,000 player profiles.</p>
+        </div>
+        <div class="project-item">
+          <h3>Peaceful Countries Classifier</h3>
+          <p>Developed a classifier to categorize countries by peace index with 94% accuracy.</p>
+        </div>
+        <div class="project-item">
+          <h3>Soccer Player Recommendation System</h3>
+            <p>Built a recommendation system to suggest players for Premier League teams based on various statistics.
+            <a href="https://kevinlian2it.github.io/SoccerProject/" target="_blank">View Project</a>
+              (Note: first execute may take up to a minute, be patient!)
+            </p>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -93,11 +103,13 @@
 
 <script>
   document.body.addEventListener('mousemove', function(e) {
-    document.body.style.setProperty('--x', `${e.clientX}px`);
-    document.body.style.setProperty('--y', `${e.clientY}px`);
-    console.log(`X: ${e.clientX}, Y: ${e.clientY}`); // Debugging line
+    const x = e.clientX + window.scrollX;
+    const y = e.clientY + window.scrollY;
+    document.body.style.setProperty('--x', `${x}px`);
+    document.body.style.setProperty('--y', `${y}px`);
   });
 </script>
+
 </body>
 </html>
 

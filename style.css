@@ -10,11 +10,14 @@ body {
   background: linear-gradient(135deg, #2b2d42, #1d1f27);
   color: #e0e6ed;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
-  cursor: default; /* Ensure cursor shows */
+  cursor: none; /* Hide default cursor */
 }
 
+/* Navigation */
 nav {
   position: fixed;
   top: 50%;
@@ -33,28 +36,28 @@ nav li {
 }
 
 nav a {
-  color: #89cff0; /* New accent color */
+  color: #89cff0; /* Light blue for links */
   text-decoration: none;
   font-size: 1.2em;
-  transition: color 0.3s;
+  transition: color 0.3s, box-shadow 0.3s;
 }
 
 nav a:hover, nav a:focus {
-  color: #ffd700; /* Gold hover effect */
+  color: #a78bfa; /* Soft violet on hover */
+  box-shadow: 0px 0px 15px rgba(167, 139, 250, 0.6); /* Soft violet glow */
 }
 
 /* Main Content */
 main {
   max-width: 800px;
-  margin: 0 auto;
   padding: 40px;
   text-align: left;
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for main content */
 }
 
-header {
-  margin-top: 20px;
-}
-
+/* Headers */
 header h1 {
   font-size: 2.5em;
   color: #89cff0; /* Accent color for main header */
@@ -65,46 +68,57 @@ header p {
   color: #b0bec5; /* Muted gray for subtitle */
 }
 
-section {
-  margin: 40px 0;
-}
-
+/* Section Headers */
 h2 {
   font-size: 1.8em;
-  color: #ffd700; /* Gold for section headers */
+  color: #a78bfa; /* Soft violet for section headers */
   margin-bottom: 15px;
 }
 
+/* Cards for Experience, Projects, and Education */
 .experience-item, .project-item, .education-item {
   margin-bottom: 20px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: #1a1a2e;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.experience-item:hover, .project-item:hover, .education-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(137, 207, 240, 0.6); /* Light blue glow */
+}
+
+/* Links within Content */
 a {
-  color: #89cff0; /* Accent color for links */
+  color: #89cff0; /* Base color for links */
+  transition: color 0.3s, box-shadow 0.3s;
 }
 
+a:hover {
+  color: #a78bfa; /* Violet color on hover */
+  box-shadow: 0px 0px 8px rgba(167, 139, 250, 0.6); /* Soft violet glow */
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   color: #b0bec5;
 }
 
-/* Custom Cursor Effect */
+/* Custom Cursor */
 body::before {
   content: '';
   position: absolute;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: rgba(100, 255, 218, 0.15); /* Soft glow effect */
+  background: rgba(167, 139, 250, 0.15); /* Soft violet glow */
   pointer-events: none;
   transform: translate(-50%, -50%);
-  left: var(--x); /* Use custom property --x */
-  top: var(--y);  /* Use custom property --y */
+  left: var(--x);
+  top: var(--y);
   transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
 }
 
@@ -114,11 +128,10 @@ body::after {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #64ffda; /* Main cursor color */
+  background: #a78bfa; /* Soft violet dot for cursor */
   pointer-events: none;
   transform: translate(-50%, -50%);
-  left: var(--x); /* Use custom property --x */
-  top: var(--y);  /* Use custom property --y */
+  left: var(--x);
+  top: var(--y);
   transition: transform 0.05s ease;
 }
-
