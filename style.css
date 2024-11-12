@@ -7,12 +7,12 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #1d1f27, #101216);
+  background: linear-gradient(135deg, #2b2d42, #1d1f27);
   color: #e0e6ed;
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  cursor: none;
+  cursor: default; /* Ensure cursor shows */
 }
 
 nav {
@@ -33,14 +33,14 @@ nav li {
 }
 
 nav a {
-  color: #8892b0;
+  color: #89cff0; /* New accent color */
   text-decoration: none;
   font-size: 1.2em;
   transition: color 0.3s;
 }
 
 nav a:hover, nav a:focus {
-  color: #64ffda;
+  color: #ffd700; /* Gold hover effect */
 }
 
 /* Main Content */
@@ -57,12 +57,12 @@ header {
 
 header h1 {
   font-size: 2.5em;
-  color: #64ffda;
+  color: #89cff0; /* Accent color for main header */
 }
 
 header p {
   font-size: 1.2em;
-  color: #8892b0;
+  color: #b0bec5; /* Muted gray for subtitle */
 }
 
 section {
@@ -71,23 +71,11 @@ section {
 
 h2 {
   font-size: 1.8em;
-  color: #64ffda;
+  color: #ffd700; /* Gold for section headers */
   margin-bottom: 15px;
 }
 
-.experience-item, .project-item {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: #1a1a2e;
-  border-radius: 8px;
-}
-
-a {
-  color: #64ffda;
-}
-
-/* Education Section */
-.education-item {
+.experience-item, .project-item, .education-item {
   margin-bottom: 20px;
   padding: 10px 20px;
   background-color: #1a1a2e;
@@ -95,22 +83,17 @@ a {
   transition: transform 0.3s ease;
 }
 
-.education-item h3 {
-  color: #64ffda;
-  font-size: 1.4em;
-  margin-bottom: 5px;
+a {
+  color: #89cff0; /* Accent color for links */
 }
 
-.education-item p {
-  color: #8892b0;
-  line-height: 1.6;
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #b0bec5;
 }
 
-.education-item:hover {
-  transform: scale(1.02);
-}
-
-/* Cursor Effect */
+/* Custom Cursor */
 body::before {
   content: '';
   position: absolute;
@@ -119,6 +102,9 @@ body::before {
   border-radius: 50%;
   background: rgba(100, 255, 218, 0.15);
   pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: var(--x); /* Custom property */
+  top: var(--y);  /* Custom property */
   transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
 }
 
@@ -130,21 +116,9 @@ body::after {
   border-radius: 50%;
   background: #64ffda;
   pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: var(--x); /* Custom property */
+  top: var(--y);  /* Custom property */
   transition: transform 0.05s ease;
-}
-
-body:hover::before, body:hover::after {
-  background: rgba(100, 255, 218, 0.25);
-}
-
-body:hover::before {
-  width: 60px;
-  height: 60px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #8892b0;
 }
 
