@@ -93,3 +93,32 @@ footer {
   color: #b0bec5;
 }
 
+/* Custom Cursor Effect */
+body::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(100, 255, 218, 0.15); /* Soft glow effect */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: var(--x); /* Use custom property --x */
+  top: var(--y);  /* Use custom property --y */
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64ffda; /* Main cursor color */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: var(--x); /* Use custom property --x */
+  top: var(--y);  /* Use custom property --y */
+  transition: transform 0.05s ease;
+}
+
