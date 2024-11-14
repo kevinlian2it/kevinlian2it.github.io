@@ -6,15 +6,17 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #2b2d42, #1d1f27);
-  color: #e0e6ed;
+  font-family: 'Roboto Slab', sans-serif;
+  background: linear-gradient(135deg, #EDE8F5, #ADB8DA); /* Soft background gradient */
+  color: #3D52A0; /* Primary text color */
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
-  cursor: none; /* Hide default cursor */
+  overflow-y: auto;
+  overscroll-behavior: none;
+  cursor: none;
 }
 
 /* Navigation */
@@ -36,15 +38,15 @@ nav li {
 }
 
 nav a {
-  color: #89cff0; /* Light blue for links */
+  color: #7091E6; /* Light blue for links */
   text-decoration: none;
   font-size: 1.2em;
   transition: color 0.3s, box-shadow 0.3s;
 }
 
 nav a:hover, nav a:focus {
-  color: #a78bfa; /* Soft violet on hover */
-  box-shadow: 0px 0px 15px rgba(167, 139, 250, 0.6); /* Soft violet glow */
+  color: #3D52A0; /* Darker blue on hover */
+  box-shadow: 0px 0px 15px rgba(61, 82, 160, 0.6); /* Soft shadow on hover */
 }
 
 /* Main Content */
@@ -52,59 +54,62 @@ main {
   max-width: 800px;
   padding: 40px;
   text-align: left;
-  background-color: #1a1a2e;
+  background-color: #EDE8F5; /* Light background for main content */
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for main content */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for content */
 }
 
 /* Headers */
 header h1 {
   font-size: 2.5em;
-  color: #89cff0; /* Accent color for main header */
+  color: #3D52A0; /* Main header color */
 }
 
 header p {
   font-size: 1.2em;
-  color: #b0bec5; /* Muted gray for subtitle */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #8697C4; /* Subtitle muted color */
 }
 
 /* Section Headers */
 h2 {
   font-size: 1.8em;
-  color: #a78bfa; /* Soft violet for section headers */
+  color: #7091E6; /* Soft violet-blue for section headers */
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
-/* Cards for Experience, Projects, and Education */
-.experience-item, .project-item, .education-item {
-  margin-bottom: 20px;
+/* Cards for Experience, Projects, Education, and Publications */
+.experience-item, .project-item, .education-item, .card {
+  margin-bottom: 15px;
   padding: 15px 20px;
-  background-color: #1a1a2e;
+  background-color: #ADB8DA; /* Light muted background for cards */
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-item:hover, .project-item:hover, .education-item:hover {
+.experience-item:hover, .project-item:hover, .education-item:hover, .card:hover {
   transform: scale(1.02);
-  box-shadow: 0px 0px 15px rgba(137, 207, 240, 0.6); /* Light blue glow */
+  box-shadow: 0px 0px 15px rgba(137, 207, 240, 0.3); /* Light glow on hover */
 }
 
 /* Links within Content */
 a {
-  color: #89cff0; /* Base color for links */
+  color: #3D52A0; /* Primary color for links */
   transition: color 0.3s, box-shadow 0.3s;
 }
 
 a:hover {
-  color: #a78bfa; /* Violet color on hover */
-  box-shadow: 0px 0px 8px rgba(167, 139, 250, 0.6); /* Soft violet glow */
+  color: #7091E6; /* Slightly brighter blue on hover */
+  box-shadow: 0px 0px 8px rgba(61, 82, 160, 0.6); /* Soft shadow */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  color: #b0bec5;
+  color: #8697C4;
 }
 
 /* Custom Cursor */
@@ -128,7 +133,7 @@ body::after {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #a78bfa; /* Soft violet dot for cursor */
+  background: #3D52A0; /* Primary cursor dot */
   pointer-events: none;
   transform: translate(-50%, -50%);
   left: var(--x);
